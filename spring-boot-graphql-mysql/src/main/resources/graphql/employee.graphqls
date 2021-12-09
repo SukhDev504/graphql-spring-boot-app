@@ -1,0 +1,41 @@
+type Employee{
+
+        id:ID!
+	   name:String
+	   gender:String
+	   emailID:String
+	   mobileNo:String
+	   dob:String
+	   role:String
+	   bloodGroup:String
+	   salary:Int
+	
+	}
+	
+	
+  type Query{
+
+     getEmployees:[Employee]
+     getEmployee(id:Int):Employee
+     countEmployee: Long!
+     getEmployeesByRole(role:String):[Employee]
+     getEmployeesByName( name:String):[Employee]
+     getEmployeesByBloodGroup(bloodGroup:String) :[Employee]
+	 getEmployeesBySalary(salary:Int):[Employee]
+	 getEmployeesBySalaryLessThan(salary:Int):[Employee]
+	 getEmployeesBySalaryLessThanEqual(salary:Int):[Employee]
+	 getEmployeesBySalaryGreaterThan(salary:Int):[Employee]
+
+
+}
+  type Mutation{
+	
+	createEmployee(name: String!,gender:String, emailID:String,   mobileNo:String,   dob:String,   role:String, bloodGroup:String,salary:Int): Employee
+    updateEmployee(id:Int!,name: String!,gender:String, emailID:String,   mobileNo:String,   dob:String,   role:String, bloodGroup:String,salary:Int): Employee
+    deleteEmployee(id:Int!):Boolean
+}
+
+schema{
+query:Query
+
+}

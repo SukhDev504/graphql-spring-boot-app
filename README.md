@@ -1,8 +1,6 @@
 # graphql-spring-boot-app
-Spring boot application using GraphQL concept
-graphql-spring-boot-app
-
-Spring boot application using GraphQL concept. GraphQL is a query language for API and a runtime for fulfiling those queries with our existing data. GraphQL lets ask for what you want in a single end point
+Spring boot application using GraphQL concept. GraphQL is a query language for API and a runtime for fulfiling those queries with our existing data.
+GraphQL lets ask for what you want in a single end point
 
 In Rest we need to create multiple end point but in graphql we need single end point.
 

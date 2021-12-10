@@ -10,8 +10,10 @@ import com.cybage.springgraphql.model.Employee;
 import com.cybage.springgraphql.repository.EmployeeRepository;
 
 import javassist.NotFoundException;
+import lombok.extern.slf4j.Slf4j;
 
 @Component
+@Slf4j
 public class EmployeeMutation implements GraphQLMutationResolver {
 
 	@Autowired
@@ -28,6 +30,7 @@ public class EmployeeMutation implements GraphQLMutationResolver {
 		emp.setGender(gender);
 		emp.setBloodGroup(booldGroup);
 		emp.setSalary(salary);
+		log.info("Employee :=>" + emp.toString());
 		return employeeRepository.save(emp);
 	}
 
